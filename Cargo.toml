@@ -1,0 +1,54 @@
+[package]
+name = "forem_openapi_client"
+edition = "2021"
+version = "1.0.0"
+authors = [
+    "OpenAPI Generator team and contributors",
+    "Plastic Arts Show <plasticartsshow@gmail.com>",
+    "",
+]
+description = """
+Access Forem articles, users and other resources via API.         For a real-world example of Forem in action, check out [DEV](https://www.dev.to).         All endpoints can be accessed with the 'api-key' header and a accept header, but         some of them are accessible publicly without authentication.          Dates and date times, unless otherwise specified, must be in         the [RFC 3339](https://tools.ietf.org/html/rfc3339) format.
+ Generated at 2023-04-10T05:06:38.929104+00:00"""
+readme = "README.md"
+keywords = [
+    "forem",
+    "OpenAPI",
+    "web",
+]
+categories = [
+    "web-programming",
+    "api-bindings",
+    "authentication",
+]
+license = "Unlicense"
+
+[dependencies]
+serde = "^1.0"
+serde_derive = "^1.0"
+serde_json = "^1.0"
+serde_with = "^2.0"
+url = "^2.2"
+
+[dependencies.reqwest]
+version = "^0.11"
+features = [
+    "json",
+    "multipart",
+]
+
+[dependencies.uuid]
+version = "^1.0"
+features = ["serde"]
+
+[dev-dependencies.openapi_lib_generator]
+version = "0.2.3"
+features = []
+default-features = false
+
+[lib]
+path = "src/lib.rs"
+name = "forem_openapi_client"
+edition = "2021"
+crate-type = ["rlib"]
+required-features = []
